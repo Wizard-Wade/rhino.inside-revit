@@ -13,11 +13,15 @@ group: Deployment & Configs
 
 ### RC
 
-- Fixed conversion from `Area` to `Surface`. Now resulting surface elevation is Level elevation.
 
 {% endcapture %}
 
 {% include ltr/release_header_next.html title="Upcoming Changes" note=rc_release_notes %}
+
+{% include ltr/release-header.html title="v1.25" version="v1.25.9063.15948" ime="11/06/2024" %}
+
+- Fixed conversion from `Area` to `Surface`. Now resulting surface elevation is Level elevation.
+- Miscellaneous improvements and bug fixes
 
 {% include ltr/release-header.html title="v1.25 RC4" version="v1.25.9050.23387" pre_release=true time="10/15/2024" %}
 
