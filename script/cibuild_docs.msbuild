@@ -8,7 +8,6 @@
     <MSBuild Projects="..\src\RhinoInside.Revit.sln" Targets="Restore;Build" Properties="Configuration=Release-2022-R8" />
     <MSBuild Projects="..\src\RhinoInside.Revit.sln" Targets="Restore;Build" Properties="Configuration=Release-2023-R8" />
     <MSBuild Projects="..\src\RhinoInside.Revit.sln" Targets="Restore;Build" Properties="Configuration=Release-2024-R8" />
-    <MSBuild Projects="..\src\RhinoInside.Revit.sln" Targets="Restore;Build" Properties="Configuration=Release-2025-R8" />
   </Target>
 
   <Target Name="BuildDocs">
@@ -17,6 +16,5 @@
     <MSBuild Projects="..\src\RhinoInside.Revit.Docs.sln" Targets="Restore;Build" Properties="Configuration=Release 2022" />
     <MSBuild Projects="..\src\RhinoInside.Revit.Docs.sln" Targets="Restore;Build" Properties="Configuration=Release 2023" />
     <MSBuild Projects="..\src\RhinoInside.Revit.Docs.sln" Targets="Restore;Build" Properties="Configuration=Release 2024" />
-    <MSBuild Projects="..\src\RhinoInside.Revit.Docs.sln" Targets="Restore;Build" Properties="Configuration=Release 2025" />
   </Target>
 </Project>
