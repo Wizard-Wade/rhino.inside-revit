@@ -968,7 +968,7 @@ namespace RhinoInside.Revit.GH
         GeometryCache.StartKeepAliveRegion();
         ActiveDocumentStack.Push(e.Document);
         if (document.Enabled) StartTransactionGroups();
-        else if (Instances.ActiveDocument == document)
+        else if (Instances.ActiveCanvas?.Document == document)
         {
           if (PendingSolution is object) PendingSolution = document;
           else
