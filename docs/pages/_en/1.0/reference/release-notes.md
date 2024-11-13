@@ -20,6 +20,11 @@ group: Deployment & Configs
 
 {% include ltr/release-header.html title="v1.26 RC2" version="v1.26.9083.17651" pre_release=true time="11/06/2024" %}
 
+- Now Grasshopper con compute solutions when expired on background.
+This enables:
+  - File parameters that are synchronized.
+  - Trigger component when is in timer mode.
+  - Potentially any NewSolution() called while Grasshopper is not active.
 - Miscellaneous Improvements
 
 {% include ltr/release-header.html title="v1.26 RC1" version="v1.26.9063.16158" pre_release=true time="11/06/2024" %}
