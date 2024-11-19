@@ -160,7 +160,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
       );
 #endif
     }
-
+#if REVIT_2023
     bool Reuse
     (
       ARDB_Structure_AnalyticalPanel analyticalPanel,
@@ -265,5 +265,6 @@ namespace RhinoInside.Revit.GH.Components.Structure
       return analyticalPanel;
     }
   }
+#endif
 }
 

@@ -733,6 +733,7 @@ namespace RhinoInside.Revit.GH.Types
     Name("Analytical Structural Role"),
     Description("Represents analytical structural roles"),
   ]
+#if REVIT_2023
   public class AnalyticalStructuralRole : GH_Enum<ARDB.Structure.AnalyticalStructuralRole>
   {
     public override bool IsEmpty => Value == ARDB.Structure.AnalyticalStructuralRole.Unset;
@@ -750,4 +751,5 @@ namespace RhinoInside.Revit.GH.Types
       { (int) ARDB.Structure.AnalyticalStructuralRole.StructuralRolePanel,   "Panel" },
     };
   }
+#endif
 }

@@ -126,7 +126,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
       );
 #endif
     }
-
+#if REVIT_2023
     bool Reuse
     (
       ARDB_Structure_AnalyticalMember analyticalMember,
@@ -178,6 +178,6 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
       return analyticalMember;
     }
-    #endif
+#endif
   }
 }
