@@ -177,7 +177,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
       // Curve
       var curveLoop = analyticalPanel.GetOuterContour().ToPolyCurve();
-      var currentCurve = Curve.ProjectToPlane(curveLoop, plane).GetSubCurves();
+      var currentCurve = Curve.ProjectToPlane(curveLoop, plane).DuplicateSegments();
 
       if (currentCurve is null)
         return false;
