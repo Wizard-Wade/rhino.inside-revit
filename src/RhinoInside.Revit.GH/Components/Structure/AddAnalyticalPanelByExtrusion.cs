@@ -15,6 +15,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
       using ARDB_Structure_AnalyticalPanel = ARDB.Structure.AnalyticalModelSurface;
 #endif
 
+#if REVIT_2023
   using Convert.Geometry;
   using External.DB.Extensions;
 
@@ -33,7 +34,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
     )
     { }
 
-    #if REVIT_2023
+    
     protected override ParamDefinition[] Inputs => inputs;
     static readonly ParamDefinition[] inputs =
     {

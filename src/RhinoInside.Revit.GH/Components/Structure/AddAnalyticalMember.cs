@@ -12,10 +12,11 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
   #if REVIT_2023
     using ARDB_Structure_AnalyticalMember = ARDB.Structure.AnalyticalMember;
-  #else
+#else
       using ARDB_Structure_AnalyticalMember = ARDB.Structure.AnalyticalModelStick;
-  #endif
+#endif
 
+#if REVIT_2023
   [ComponentVersion(introduced: "1.27")]
   public class AddAnalyticalMember : ElementTrackerComponent
   {
@@ -31,7 +32,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
     )
     { }
 
-    #if REVIT_2023
+    
     protected override ParamDefinition[] Inputs => inputs;
     static readonly ParamDefinition[] inputs =
     {
