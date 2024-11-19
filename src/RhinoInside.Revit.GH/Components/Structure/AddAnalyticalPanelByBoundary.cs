@@ -19,7 +19,6 @@ namespace RhinoInside.Revit.GH.Components.Structure
       using ARDB_Structure_AnalyticalPanel = ARDB.Structure.AnalyticalModelSurface;
 #endif
 
-#if REVIT_2023
   [ComponentVersion(introduced: "1.27")]
   public class AddAnalyticalPanelByBoundary : ElementTrackerComponent
   {
@@ -39,6 +38,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
     protected override ParamDefinition[] Inputs => inputs;
     static readonly ParamDefinition[] inputs =
     {
+      #if REVIT_2023
       new ParamDefinition
       (
         new Parameters.Document()
@@ -70,11 +70,13 @@ namespace RhinoInside.Revit.GH.Components.Structure
           Optional = true,
         }.SetDefaultVale(ARDB.Structure.AnalyticalStructuralRole.StructuralRolePanel)
       )
+#endif
     };
 
     protected override ParamDefinition[] Outputs => outputs;
     static readonly ParamDefinition[] outputs =
     {
+#if REVIT_2023
       new ParamDefinition
       (
         new Parameters.AnalyticalPanel()
@@ -84,6 +86,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
           Description = $"Output {_AnalyticalPanel_}",
         }
       )
+#endif
     };
 
     const string _AnalyticalPanel_ = "Analytical Panel";
@@ -97,6 +100,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
     protected override void TrySolveInstance(IGH_DataAccess DA)
     {
+#if REVIT_2023
       if (!Parameters.Document.TryGetDocumentOrCurrent(this, DA, "Document", out var doc) || !doc.IsValid) return;
 
       ReconstructElement<ARDB_Structure_AnalyticalPanel>
@@ -137,6 +141,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
           return analyticalPanel;
         }
       );
+#endif
     }
 
     bool Reuse

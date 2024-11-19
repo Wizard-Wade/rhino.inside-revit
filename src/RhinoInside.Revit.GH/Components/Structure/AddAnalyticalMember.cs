@@ -16,7 +16,6 @@ namespace RhinoInside.Revit.GH.Components.Structure
       using ARDB_Structure_AnalyticalMember = ARDB.Structure.AnalyticalModelStick;
 #endif
 
-#if REVIT_2023
   [ComponentVersion(introduced: "1.27")]
   public class AddAnalyticalMember : ElementTrackerComponent
   {
@@ -36,6 +35,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
     protected override ParamDefinition[] Inputs => inputs;
     static readonly ParamDefinition[] inputs =
     {
+      #if REVIT_2023
       new ParamDefinition
       (
         new Parameters.Document()
@@ -67,11 +67,13 @@ namespace RhinoInside.Revit.GH.Components.Structure
           Optional = true,
         }.SetDefaultVale(ARDB.Structure.AnalyticalStructuralRole.StructuralRoleMember)
       )
+#endif
     };
 
     protected override ParamDefinition[] Outputs => outputs;
     static readonly ParamDefinition[] outputs =
     {
+#if REVIT_2023
       new ParamDefinition
       (
         new Parameters.AnalyticalMember()
@@ -81,6 +83,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
           Description = $"Output {_AnalyticalMember_}",
         }
       )
+#endif
     };
 
     const string _AnalyticalMember_ = "Analytical Member";
@@ -95,6 +98,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
     protected override void TrySolveInstance(IGH_DataAccess DA)
     {
+#if REVIT_2023
       if (!Parameters.Document.TryGetDocumentOrCurrent(this, DA, "Document", out var doc) || !doc.IsValid) return;
 
       ReconstructElement<ARDB_Structure_AnalyticalMember>
@@ -120,6 +124,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
           return analyticalMember;
         }
       );
+#endif
     }
 
     bool Reuse
