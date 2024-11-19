@@ -36,7 +36,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
     protected override ParamDefinition[] Inputs => inputs;
     static readonly ParamDefinition[] inputs =
     {
-      #if REVIT_2023
+#if REVIT_2024
       new ParamDefinition
       (
         new Parameters.Document()
@@ -87,13 +87,13 @@ namespace RhinoInside.Revit.GH.Components.Structure
           Optional = true,
         }, ParamRelevance.Secondary
       )
-      #endif
+#endif
     };
 
     protected override ParamDefinition[] Outputs => outputs;
     static readonly ParamDefinition[] outputs =
     {
-#if REVIT_2023
+#if REVIT_2024
       new ParamDefinition
       (
         new Parameters.AnalyticalPanel()
@@ -110,7 +110,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
     static readonly ARDB.BuiltInParameter[] ExcludeUniqueProperties =
     {
-#if REVIT_2023
+#if REVIT_2024
       ARDB.BuiltInParameter.STRUCTURAL_ANALYZES_AS,
       ARDB.BuiltInParameter.ANALYTICAL_ELEMENT_STRUCTURAL_ROLE,
       ARDB.BuiltInParameter.ANALYTICAL_PANEL_THICKNESS
@@ -119,7 +119,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
     protected override void TrySolveInstance(IGH_DataAccess DA)
     {
-#if REVIT_2023
+#if REVIT_2024
       if (!Parameters.Document.TryGetDocumentOrCurrent(this, DA, "Document", out var doc) || !doc.IsValid) return;
 
       ReconstructElement<ARDB_Structure_AnalyticalPanel>
@@ -162,7 +162,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
       );
 #endif
     }
-#if REVIT_2023
+#if REVIT_2024
     bool Reuse
     (
       ARDB_Structure_AnalyticalPanel analyticalPanel,
