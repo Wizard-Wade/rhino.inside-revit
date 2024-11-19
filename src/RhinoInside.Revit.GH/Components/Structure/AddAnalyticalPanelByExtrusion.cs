@@ -87,7 +87,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
           Optional = true,
         }, ParamRelevance.Secondary
       )
-        #endif
+      #endif
     };
 
     protected override ParamDefinition[] Outputs => outputs;
@@ -264,7 +264,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
       return analyticalPanel;
     }
+# endif
   }
-#endif
 }
 
