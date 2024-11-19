@@ -16,7 +16,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
       using ARDB_Structure_AnalyticalMember = ARDB.Structure.AnalyticalModelStick;
   #endif
 
-  [ComponentVersion(introduced: "1.26")]
+  [ComponentVersion(introduced: "1.27")]
   public class AddAnalyticalMember : ElementTrackerComponent
   {
     public override Guid ComponentGuid => new Guid("88AD5522-B3AD-4A67-AB96-3D90249BA215");

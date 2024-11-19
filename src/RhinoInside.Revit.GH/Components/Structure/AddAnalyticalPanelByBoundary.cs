@@ -19,7 +19,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
       using ARDB_Structure_AnalyticalPanel = ARDB.Structure.AnalyticalModelSurface;
   #endif
 
-  [ComponentVersion(introduced: "1.26")]
+  [ComponentVersion(introduced: "1.27")]
   public class AddAnalyticalPanelByBoundary : ElementTrackerComponent
   {
     public override Guid ComponentGuid => new Guid("BA2D1733-0A7A-463C-BDDC-4262405F4FE6");

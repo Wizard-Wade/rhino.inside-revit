@@ -10,7 +10,7 @@ namespace RhinoInside.Revit.GH.Parameters
     using ARDB_Structure_AnalyticalMember = ARDB.Structure.AnalyticalModelStick;
   #endif
 
-  [ComponentVersion(introduced: "1.26")]
+  [ComponentVersion(introduced: "1.27")]
   public class AnalyticalMember : GraphicalElement<Types.AnalyticalMember, ARDB_Structure_AnalyticalMember>
   {
     public override GH_Exposure Exposure => GH_Exposure.primary | GH_Exposure.hidden;

@@ -18,7 +18,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
   using Convert.Geometry;
   using External.DB.Extensions;
 
-  [ComponentVersion(introduced: "1.26")]
+  [ComponentVersion(introduced: "1.27")]
   public class AddAnalyticalPanelByExtrusion : ElementTrackerComponent
   {
     public override Guid ComponentGuid => new Guid("872CCB2C-E374-4C3F-B7A7-24686AD3911C");

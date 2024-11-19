@@ -10,7 +10,7 @@ namespace RhinoInside.Revit.GH.Parameters
       using ARDB_Structure_AnalyticalPanel = ARDB.Structure.AnalyticalModelSurface;
 #endif
 
-  [ComponentVersion(introduced: "1.26")]
+  [ComponentVersion(introduced: "1.27")]
   public class AnalyticalPanel : GraphicalElement<Types.AnalyticalPanel, ARDB_Structure_AnalyticalPanel>
   {
     public override GH_Exposure Exposure => GH_Exposure.primary | GH_Exposure.hidden;

@@ -728,7 +728,7 @@ namespace RhinoInside.Revit.GH.Types
     };
   }
   [
-    ComponentVersion(introduced: "1.26"),
+    ComponentVersion(introduced: "1.27"),
     ComponentGuid("84CCF256-95C2-4D9B-BFCD-303567FDF89B"),
     Name("Analytical Structural Role"),
     Description("Represents analytical structural roles"),
