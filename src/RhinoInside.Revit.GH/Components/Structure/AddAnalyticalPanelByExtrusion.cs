@@ -33,6 +33,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
     )
     { }
 
+    #if REVIT_2023
     protected override ParamDefinition[] Inputs => inputs;
     static readonly ParamDefinition[] inputs =
     {
@@ -258,6 +259,7 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
       return analyticalPanel;
     }
+    #endif
   }
 }
 
