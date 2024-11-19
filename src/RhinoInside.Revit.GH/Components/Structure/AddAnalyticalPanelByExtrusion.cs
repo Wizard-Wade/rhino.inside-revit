@@ -110,9 +110,11 @@ namespace RhinoInside.Revit.GH.Components.Structure
 
     static readonly ARDB.BuiltInParameter[] ExcludeUniqueProperties =
     {
+#if REVIT_2023
       ARDB.BuiltInParameter.STRUCTURAL_ANALYZES_AS,
       ARDB.BuiltInParameter.ANALYTICAL_ELEMENT_STRUCTURAL_ROLE,
       ARDB.BuiltInParameter.ANALYTICAL_PANEL_THICKNESS
+#endif
     };
 
     protected override void TrySolveInstance(IGH_DataAccess DA)
