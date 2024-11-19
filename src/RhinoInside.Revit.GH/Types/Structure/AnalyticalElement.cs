@@ -79,5 +79,25 @@ namespace RhinoInside.Revit.GH.Types
 
     public AnalyticalSurface() { }
     public AnalyticalSurface(ARDB_Structure_AnalyticalSurfaceBase element) : base(element) { }
+
+  }
+}
+
+namespace RhinoInside.Revit.GH.Types
+{
+#if REVIT_2023
+  using ARDB_Structure_AnalyticalPanel = ARDB.Structure.AnalyticalPanel;
+#else
+  using ARDB_Structure_AnalyticalPanel = ARDB.Structure.AnalyticalModelSurface;
+#endif
+
+  [Kernel.Attributes.Name("Analytical Panel")]
+  public class AnalyticalPanel : AnalyticalSurface
+  {
+    protected override Type ValueType => typeof(ARDB_Structure_AnalyticalPanel);
+    public new ARDB_Structure_AnalyticalPanel Value => base.Value as ARDB_Structure_AnalyticalPanel;
+
+    public AnalyticalPanel() { }
+    public AnalyticalPanel(ARDB_Structure_AnalyticalPanel element) : base(element) { }
   }
 }
