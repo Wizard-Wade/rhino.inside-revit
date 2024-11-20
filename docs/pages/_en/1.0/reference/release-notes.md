@@ -18,6 +18,13 @@ group: Deployment & Configs
 
 {% include ltr/release_header_next.html title="Upcoming Changes" note=rc_release_notes %}
 
+{% include ltr/release-header.html title="v1.27 RC1" version="v1.27.9090.24663" pre_release=true time="11/20/2024" %}
+
+- Added {% include ltr/comp.html uuid='88ad5522' %}
+- Added {% include ltr/comp.html uuid='ba2d1733' %}
+- Added {% include ltr/comp.html uuid='872ccb2c' %}
+- Miscellaneous Improvements
+
 {% include ltr/release-header.html title="v1.26" version="v1.26.9083.18516" ime="11/20/2024" %}
 
 - Includes all changes under 1.26 RC releases listed below
